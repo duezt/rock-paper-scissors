@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCK PAPPER SCISSORS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    pepe
-    
+    <div class="btn-div">
+        <button class="btn">Rock</button>
+        <button class="btn">Paper</button>
+        <button class="btn">Scissor</button>
+    </div>
+   
     <script>
+        const playerSelection = '';
+        const computerSelection = computerPlay()
 
 
+        
+        console.log(computerSelection)
+
+
+        function computerPlay(computerSelection) {
+            let randomSelection = Math.floor(Math.random() * Math.floor(3));
+            let computerPlay;
+            if(randomSelection == 0) {
+                let computerPlay = 'Rock';
+                computerSelection = computerPlay;
+
+            } else if (randomSelection == 1) {
+                let computerPlay = 'Paper'; 
+                computerSelection = computerPlay;
+                
+            } else {
+                let computerPlay = 'scissor';
+                computerSelection = computerPlay;
+            }
+            return computerSelection
+        }
+       
     </script>
+
+
 </body>
 </html>
